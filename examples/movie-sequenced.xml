@@ -21,7 +21,7 @@
             <place>00:00:00:00</place><!-- position on the timeline -->
             <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
             <clip-end>00:00:20:00</clip-end>
-            <mute>false</mute><!-- true/false -->
+            <mute>true</mute><!-- true/false -->
                 
             <!-- By default, this should contain the start- and endpoints -->
             <volumepoints>
@@ -50,9 +50,9 @@
         <visual type="image">
             <file>tmp/1.jpg</file>
             <place>00:00:21:00</place><!-- position on the timeline -->
-            <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+            <clip-start>00:00:21:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
             <clip-end>00:00:25:00</clip-end>
-            <mute>false</mute><!-- true/false -->
+            <mute>true</mute><!-- true/false -->
                 
             <!-- By default, this should contain the start- and endpoints -->
             <volumepoints>
@@ -69,13 +69,14 @@
                     
             </effects>
         </visual>
-            
-        <audio>
-            <file>tmp/1.mp3</file>
-            <start-point>00:00:11:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-            <end-point>00:00:20:00</end-point><!-- Same as the start-point -->
-            <place>00:00:00:00</place><!-- h:m:s:ms --> 
-                
+
+        <visual type="image">
+            <file>tmp/2.jpg</file>
+            <place>00:00:40:00</place><!-- position on the timeline -->
+            <clip-start>00:00:40:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+            <clip-end>00:00:50:00</clip-end>
+            <mute>false</mute><!-- true/false -->
+
             <!-- By default, this should contain the start- and endpoints -->
             <volumepoints>
                 <volumepoint>
@@ -85,6 +86,28 @@
                 <volumepoint>
                     <volume>100</volume>
                     <point>00:00:00:00</point>
+                </volumepoint>
+            </volumepoints>
+            <effects>
+
+            </effects>
+        </visual>
+            
+        <audio>
+            <file>tmp/1.mp3</file>
+            <start-point>00:00:10:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+            <end-point>00:00:60:00</end-point><!-- Same as the start-point -->
+            <place>00:00:05:00</place><!-- h:m:s:ms -->
+                
+            <!-- By default, this should contain the start- and endpoints -->
+            <volumepoints>
+                <volumepoint>
+                    <volume>100</volume>
+                    <point>00:00:05:00</point>
+                </volumepoint>
+                <volumepoint>
+                    <volume>100</volume>
+                    <point>00:00:25:00</point>
                 </volumepoint>
             </volumepoints>
         </audio>      
