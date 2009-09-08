@@ -101,6 +101,7 @@ class VideoTools
   
   #Combine clips in a movie
   def combine_video(movie)
+    
     trimmed_visuals = ""
     contents = movie.visual_sequence.visuals
     contents.each{|visual|
