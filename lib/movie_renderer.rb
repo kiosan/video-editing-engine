@@ -53,8 +53,6 @@ class MovieRenderer
   def process_visuals(movie)
     visuals = movie.visual_sequence.sort
     visuals.each {|visual|
-      p "Visual:"
-      p visual
       if(visual.type == "video")
         @video_tool.trim_video(movie, visual)
       elsif(visual.type == "image")
