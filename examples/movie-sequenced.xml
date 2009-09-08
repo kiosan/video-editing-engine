@@ -12,7 +12,7 @@
     <metadata>
         <name>test</name>
         <format>mp4</format><!-- mp4, MPEG-2, Xvid -->
-        <resolution>720x576</resolution><!-- 720x576, 640x480, 320x240 -->
+        <resolution>320x240</resolution><!-- 720x576, 640x480, 320x240 -->
     </metadata>    
     
     <sequence>
@@ -49,9 +49,9 @@
              
         <visual type="image">
             <file>tmp/1.jpg</file>
-            <place>00:00:11:00</place><!-- position on the timeline -->
-            <clip-start>00:00:11:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-            <clip-end>00:00:20:00</clip-end>
+            <place>00:00:21:00</place><!-- position on the timeline -->
+            <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+            <clip-end>00:00:25:00</clip-end>
             <mute>false</mute><!-- true/false -->
                 
             <!-- By default, this should contain the start- and endpoints -->
