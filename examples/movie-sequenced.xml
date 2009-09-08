@@ -19,8 +19,8 @@
         <visual type="video">
             <file>tmp/2012.mp4</file>
             <place>00:00:00:00</place><!-- position on the timeline -->
-            <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-            <clip-end>00:00:20:00</clip-end>
+            <clip-start>00:00:20:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+            <clip-end>00:00:38:00</clip-end>
             <mute>false</mute><!-- true/false -->
                 
             <!-- By default, this should contain the start- and endpoints -->
@@ -31,7 +31,7 @@
                 </volumepoint>
                 <volumepoint>
                     <volume>100</volume>
-                    <point>00:00:20:00</point>
+                    <point>00:00:00:00</point>
                 </volumepoint>
             </volumepoints>
                 
