@@ -36,8 +36,6 @@ class AudioTools
   
   def mix_audio_sequence(sequence, project)
     audios = sequence.audios
-    p "--------------Audio-----------"
-    p sequence.audios
     unless(audios.length == 0)
       eca_cmd = "ecasound -b:256 "
       0.upto(audios.length - 1){|i|
@@ -46,7 +44,7 @@ class AudioTools
     
       audiotrack_filename = project.final + "/audiotrack.wav"
     
-      eca_cmd << " -a:all -o #{audiotrack_filename} " #1>/dev/null 2>&1
+      eca_cmd << " -a:all -o #{audiotrack_filename} 1>/dev/null 2>&1"
       puts eca_cmd
       system(eca_cmd)
     else
