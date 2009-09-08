@@ -26,6 +26,7 @@ class MovieRenderer
     
     update_all("MovieRenderer", "Processing visuals...")
     video_file = process_visuals(movie)
+    p video_file
     update_all("MovieRenderer", "...videoprocessing finished!")
     
     update_all("MovieRenderer", "Multiplexing audio and video...")
@@ -52,6 +53,8 @@ class MovieRenderer
   def process_visuals(movie)
     visuals = movie.visual_sequence.sort
     visuals.each {|visual|
+      p "Visual:"
+      p visual
       if(visual.type == "video")
         @video_tool.trim_video(movie, visual)
       elsif(visual.type == "image")
