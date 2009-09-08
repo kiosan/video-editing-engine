@@ -21,7 +21,7 @@
                 <file>tmp/2012.mp4</file>
                 <place>00:00:00:00</place><!-- position on the timeline -->
                 <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-                <clip-end>00:00:00:00</clip-end>
+                <clip-end>00:00:30:00</clip-end>
                 <mute>false</mute><!-- true/false -->
                 
                 <!-- By default, this should contain the start- and endpoints -->
@@ -31,13 +31,13 @@
                         <point>00:00:00:00</point>
                     </volumepoint>
                     <volumepoint>
-                        <volume>100</volume>
-                        <point>00:00:00:00</point>
+                        <volume>20</volume>
+                        <point>00:00:10:00</point>
                     </volumepoint>
                 </volumepoints>
                 
                 <effects>
-                    <effect name="crossfade" startPoint="00:00:00:00" endPoint="00:00:00:00">
+                    <effect name="crossfade" startPoint="00:00:05:00" endPoint="00:00:08:00">
                         <param name="" value="" />
                     </effect>
                     
@@ -50,9 +50,9 @@
              
              <visual type="image">
                 <file>tmp/1.jpg</file>
-                <place>00:00:00:00</place><!-- position on the timeline -->
-                <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-                <clip-end>00:00:00:00</clip-end>
+                <place>00:00:10:00</place><!-- position on the timeline -->
+                <clip-start>00:00:12:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+                <clip-end>00:00:18:00</clip-end>
                 <mute>false</mute><!-- true/false -->
                 
                 <!-- By default, this should contain the start- and endpoints -->
@@ -83,7 +83,7 @@
             <audio>
                 <file>tmp/1.mp3</file>
                 <start-point>00:00:00:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-                <end-point>00:00:00:00</end-point><!-- Same as the start-point -->
+                <end-point>00:00:10:00</end-point><!-- Same as the start-point -->
                 <place>00:00:00:00</place><!-- h:m:s:ms --> 
                 
                 <!-- By default, this should contain the start- and endpoints -->
@@ -100,8 +100,8 @@
             </audio>      
             <audio>
                 <file>tmp/2.mp3</file>
-                <start-point>00:00:00:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-                <end-point>00:00:00:00</end-point><!-- Same as the start-point -->
+                <start-point>00:00:10:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+                <end-point>00:00:15:00</end-point><!-- Same as the start-point -->
                 <place>00:00:00:00</place><!-- h:m:s:ms --> 
                 
                 <!-- By default, this should contain the start- and endpoints -->
