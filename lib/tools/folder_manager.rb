@@ -52,7 +52,7 @@ class FolderManager
   private :clear_directory
   
   def create_directory(dir)
-      Dir.mkdir_p(dir) unless File.exists?(dir)
+      FileUtils.mkdir_p(dir) unless File.exists?(dir)
   end
   private :create_directory
   
