@@ -24,7 +24,7 @@ class ChanneledBuilder < BasicBuilder
     video_channels = XPath.first(xml, "/movie/video-channels")
     XPath.each(video_channels, "channel"){ |channel|
       XPath.each(channel, "visual"){|visual|
-        visual_sequence.addVideo(read_visual(visual))
+        visual_sequence.add_video(read_visual(visual))
       }     
     }
     movie.visual_sequence = visual_sequence
