@@ -21,7 +21,7 @@
             <place>00:00:00:00</place><!-- position on the timeline -->
             <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
             <clip-end>00:00:20:00</clip-end>
-            <mute>true</mute><!-- true/false -->
+            <mute>false</mute><!-- true/false -->
                 
             <!-- By default, this should contain the start- and endpoints -->
             <volumepoints>
@@ -52,7 +52,7 @@
             <place>00:00:21:00</place><!-- position on the timeline -->
             <clip-start>00:00:21:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
             <clip-end>00:00:25:00</clip-end>
-            <mute>true</mute><!-- true/false -->
+            <mute>false</mute><!-- true/false -->
                 
             <!-- By default, this should contain the start- and endpoints -->
             <volumepoints>
