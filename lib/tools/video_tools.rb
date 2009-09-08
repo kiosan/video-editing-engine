@@ -112,7 +112,7 @@ class VideoTools
     cmd.sub!('<source>', trimmed_visuals)
     cmd.sub!('<target>', video_file)
     puts "Combining videos"
-    #puts cmd
+    puts cmd
     system(cmd)
     return video_file
   end
