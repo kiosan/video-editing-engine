@@ -11,8 +11,8 @@
 <movie version="1" type="sequenced">
     <metadata>
         <name>test</name>
-        <format>mp4</format><!-- mp4, MPEG-2, Xvid -->
-        <resolution>320x240</resolution><!-- 720x576, 640x480, 320x240 -->
+        <format>MPEG-2</format><!-- mp4, MPEG-2, Xvid -->
+        <resolution>720x576</resolution><!-- 720x576, 640x480, 320x240 -->
     </metadata>    
     
     <sequence>
@@ -95,9 +95,9 @@
             
         <audio>
             <file>tmp/1.mp3</file>
-            <start-point>00:00:00:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
-            <end-point>00:00:60:00</end-point><!-- Same as the start-point -->
-            <place>00:00:00:00</place><!-- h:m:s:ms -->
+            <start-point>00:00:10:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
+            <end-point>00:00:40:00</end-point><!-- Same as the start-point -->
+            <place>00:00:15:00</place><!-- h:m:s:ms -->
                 
             <!-- By default, this should contain the start- and endpoints -->
             <volumepoints>
