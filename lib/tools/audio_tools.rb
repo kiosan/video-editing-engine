@@ -36,6 +36,8 @@ class AudioTools
   
   def mix_audio_sequence(sequence, project)
     audios = sequence.audios
+    p "--------------Audio-----------"
+    p sequence.audios
     unless(audios.length == 0)
       eca_cmd = "ecasound -b:256 "
       0.upto(audios.length - 1){|i|
