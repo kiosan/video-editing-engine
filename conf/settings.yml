@@ -22,4 +22,6 @@ still_video: ffmpeg -loop_input -vframes <frames> -f image2 -i <source> -vcodec 
 
 video_combine: mencoder -forceidx -oac copy -ovc copy -noskip -o <target> <source> 1>/dev/null 2>&1
 
-final_mux: ffmpeg -i <source_video> -i <source_audio> <audio_options> <video_options> <target> 1>/dev/null 2>&1
+final_mux: ffmpeg -i <source_video> -i <source_audio> <audio_options> <video_options> <target>
+
+# 1>/dev/null 2>&1
