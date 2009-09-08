@@ -11,7 +11,7 @@
 <movie version="1" type="sequenced">
     <metadata>
         <name>test</name>
-        <format>Xvid</format><!-- mp4, MPEG-2, Xvid -->
+        <format>mp4</format><!-- mp4, MPEG-2, Xvid -->
         <resolution>720x576</resolution><!-- 720x576, 640x480, 320x240 -->
     </metadata>    
     
