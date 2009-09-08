@@ -18,7 +18,7 @@
         <channel id="A">
             
             <visual type="video">
-                <file>tmp/export/1/scene01.mp4</file>
+                <file>tmp/2012.mp4</file>
                 <place>00:00:00:00</place><!-- position on the timeline -->
                 <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
                 <clip-end>00:00:00:00</clip-end>
@@ -49,7 +49,7 @@
              </visual>
              
              <visual type="image">
-                <file>tmp/export/1/street.png</file>
+                <file>tmp/1.jpg</file>
                 <place>00:00:00:00</place><!-- position on the timeline -->
                 <clip-start>00:00:00:00</clip-start><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
                 <clip-end>00:00:00:00</clip-end>
@@ -81,7 +81,7 @@
     <audio-channels>
         <channel id="Audio1">
             <audio>
-                <file>tmp/export/1/someMusic.mp3</file>
+                <file>tmp/1.mp3</file>
                 <start-point>00:00:00:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
                 <end-point>00:00:00:00</end-point><!-- Same as the start-point -->
                 <place>00:00:00:00</place><!-- h:m:s:ms --> 
@@ -99,7 +99,7 @@
                 </volumepoints>
             </audio>      
             <audio>
-                <file>tmp/export/1/someOtherMusic.mp3</file>
+                <file>tmp/2.mp3</file>
                 <start-point>00:00:00:00</start-point><!-- h:m:s:ms or hours:minutes:seconds:milliseconds -->
                 <end-point>00:00:00:00</end-point><!-- Same as the start-point -->
                 <place>00:00:00:00</place><!-- h:m:s:ms --> 
