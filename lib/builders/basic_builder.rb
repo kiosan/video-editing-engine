@@ -12,8 +12,8 @@ class BasicBuilder
   def read_visual(visual)
     type = visual.attribute("type").to_s
     file = XPath.first(visual, "file").text
-    start_point = XPath.first(visual, "clip-start").text
-    end_point = XPath.first(visual, "clip-end").text
+    start_point = XPath.first(visual, "clip_start").text
+    end_point = XPath.first(visual, "clip_end").text
     place = XPath.first(visual, "place").text
     mute = XPath.first(visual, "mute").text
     if(mute == "true")
@@ -43,8 +43,8 @@ class BasicBuilder
   #and creates an Audio - object from that data.
   def read_audio(audio)
     file = XPath.first(audio, "file").text
-    start_point = XPath.first(audio, "start-point").text
-    end_point = XPath.first(audio, "end-point").text
+    start_point = XPath.first(audio, "start_point").text
+    end_point = XPath.first(audio, "end_point").text
     place = XPath.first(audio, "place").text
 
     #If no VolumePoints are found, an empty array is given.

@@ -31,7 +31,7 @@ class ChanneledBuilder < BasicBuilder
     
     #Parse audio sequence from xml
     audio_sequence = AudioSequence.new
-    audio_channels = XPath.first(xml, "/movie/audio-channels")
+    audio_channels = XPath.first(xml, "/movie/audio_channels")
     XPath.each(audio_channels, "channel"){ |channel|
       XPath.each(channel, "audio"){|audio|
         audio_sequence.add_audio(read_audio(audio))
