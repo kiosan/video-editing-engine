@@ -10,7 +10,8 @@ class FolderManager
   end
   
   def create_project_layout(project, story_id)
-      workspace = VREConfig.instance.vre_root + VREConfig.instance.settings['workspace']
+      #workspace = VREConfig.instance.vre_root + VREConfig.instance.settings['workspace']
+      workspace =  VREConfig.instance.settings['workspace']
 
       project_folder = workspace + "/#{story_id}"
       #projectFolder = workspace + "/" + project.name
