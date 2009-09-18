@@ -14,7 +14,7 @@ class FolderManager
 
       project_folder = workspace + "/#{story_id}"
       #projectFolder = workspace + "/" + project.name
-      delete_project_folder(project)
+      #delete_project_folder(project)
       project.set_project_folders(project_folder)
       create_directory(project.root)
       create_directory(project.originals)
