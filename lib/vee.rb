@@ -13,18 +13,18 @@ class Vee
     
   end
   
-  def process_movie_file(movie_file)
+  def process_movie_file(movie_file, story_id)
     builder = MovieBuilder.new
     builder.register(self)
     movie = builder.build_movie(movie_file)
     if(movie != nil)
-      process_movie(movie)
+      process_movie(movie, story_id)
     end
   end
   
-  def process_movie(movie)
+  def process_movie(movie, story_id)
     folder_manager = FolderManager.new
-    folder_manager.create_project_layout(movie.project)
+    folder_manager.create_project_layout(movie.project, story_id)
     puts "Created folders for the project in workspace: #{movie.project.root}"
     normalizer = MovieNormalizer.new
     normalizer.register(self)

@@ -6,6 +6,9 @@ puts "\nVideo Editing Engine (v.0.2-alpha)"
 puts ""
 
 movie_file = ARGV[0]
+
+story_id = ARGV[1]
+
 if(movie_file == nil)
   puts "Parameter missing!"
   puts "USAGE: ruby vre <file>"
@@ -19,7 +22,7 @@ else
   start = Time.now
 
   vee = Vee.new()
-  vee.process_movie_file(movie_file)
+  vee.process_movie_file(movie_file, story_id)
 
   stop = Time.now
   puts "It took #{stop - start} seconds to finish"

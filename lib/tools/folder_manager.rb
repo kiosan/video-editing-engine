@@ -9,12 +9,12 @@ class FolderManager
     
   end
   
-  def create_project_layout(project)
+  def create_project_layout(project, story_id)
       workspace = VREConfig.instance.vre_root + VREConfig.instance.settings['workspace']
-      time = Time.now.strftime("%H%M%S%d%m%Y") #hour minute second day month year
 
-      project_folder = workspace + "/#{project.name}-#{time.to_s}"
+      project_folder = workspace + "/#{story_id}"
       #projectFolder = workspace + "/" + project.name
+      delete_project_folder(project)
       project.set_project_folders(project_folder)
       create_directory(project.root)
       create_directory(project.originals)

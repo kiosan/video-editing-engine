@@ -20,5 +20,4 @@ class VREConfig
         end
         @config
     end
-
 end
