@@ -116,6 +116,15 @@ class VideoTools
     system(cmd)
     return video_file
   end
+
+  def generate_thumbnail(movie)
+    thumb_file = movie.project.final + "/thumbnail.jpg"
+    cmd = @settings['thumbnail'].dup
+    video_file = movie.project.final + "/videotrack.avi"
+    cmd.sub!('<source_video>', video_file)
+    cmd.sub!('<thumbnail>', thumb_file)
+    system(cmd)
+  end
   
   #Combine video- and audiotracks to one videofile
   def multiplex(movie, video_file, audio_file)

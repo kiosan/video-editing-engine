@@ -31,7 +31,10 @@ class MovieRenderer
     update_all("MovieRenderer", "Multiplexing audio and video...")
     @video_tool.multiplex(movie, video_file, audio_file)
     update_all("MovieRenderer", "...multiplexing finished")
-    
+
+    update_all("MovieRenderer", "...generating thumbnail")
+    @video_tool.generate_thumbnail(movie)
+
     update_all("MovieRenderer", "Rendering finished!")
   end
   

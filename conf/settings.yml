@@ -10,6 +10,7 @@ workspace: /home/kiosan/projects/zee/public/video_stories
 
 ffmpeg_get_info: ffmpeg -i <source_file> 2>&1
 
+
 #
 # Settings for rendering-phase
 #
@@ -25,3 +26,5 @@ video_combine: mencoder -forceidx -oac copy -ovc copy -noskip -o <target> <sourc
 final_mux: ffmpeg -i <source_video> -i <source_audio> <audio_options> <video_options> <target> 
 
 # 1>/dev/null 2>&1
+
+thumbnail: ffmpeg  -itsoffset -4  -i <source_video> -vcodec mjpeg -vframes 1 -an -f rawvideo -s 120x90 <thumbnail>
