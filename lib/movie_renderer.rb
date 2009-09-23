@@ -26,7 +26,6 @@ class MovieRenderer
     
     update_all("MovieRenderer", "Processing visuals...")
     video_file = process_visuals(movie)
-    p video_file
     update_all("MovieRenderer", "...videoprocessing finished!")
     
     update_all("MovieRenderer", "Multiplexing audio and video...")

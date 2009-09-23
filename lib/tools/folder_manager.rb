@@ -61,7 +61,7 @@ class FolderManager
   def remove_directory(dir)
       if(File.exists?(dir))
         clear_directory(dir)
-        Dir.rmdir(dir)
+        FileUtils.rm_r dir, :force => true
       end
   end
   private :remove_directory
