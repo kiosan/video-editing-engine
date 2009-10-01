@@ -44,7 +44,7 @@ class AudioTools
     
       audiotrack_filename = project.final + "/audiotrack.wav"
     
-      eca_cmd << " -a:all -o #{audiotrack_filename} 1>/dev/null 2>&1"
+      eca_cmd << " -a:all -o #{audiotrack_filename} " #1>/dev/null 2>&1
       p eca_cmd
       IO.popen(eca_cmd) do |pipe|
       
