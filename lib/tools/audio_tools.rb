@@ -37,7 +37,7 @@ class AudioTools
   def mix_audio_sequence(sequence, project)
     audios = sequence.audios
     unless(audios.length == 0)
-      eca_cmd = "ecasound -b:256 "
+      eca_cmd = "ecasound -b:256k "
       0.upto(audios.length - 1){|i|
         eca_cmd << " -a:#{i + 1} -i #{audios[i].ewf_file}"
       }
@@ -45,11 +45,7 @@ class AudioTools
       audiotrack_filename = project.final + "/audiotrack.wav"
     
       eca_cmd << " -a:all -o #{audiotrack_filename} " #1>/dev/null 2>&1
-      p eca_cmd
-      IO.popen(eca_cmd) do |pipe|
-      
-      end
-      
+      system(eca_cmd)
     else
       audiotrack_filename = VREConfig.instance.vre_root + "resources/silencio.wav"
     end
