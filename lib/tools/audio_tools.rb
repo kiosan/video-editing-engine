@@ -42,7 +42,7 @@ class AudioTools
         eca_cmd << " -a:#{i + 1} -i #{audios[i].ewf_file}"
       }
     
-      audiotrack_filename = project.final + "/audiotrack.wav"
+      audiotrack_filename = project.final + "/track.wav"
     
       eca_cmd << " -a:all -o #{audiotrack_filename} " #1>/dev/null 2>&1
       system(eca_cmd)
