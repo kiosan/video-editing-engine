@@ -46,7 +46,7 @@ class Vee
     renderer = MovieRenderer.new
     renderer.register(self)
     renderer.render(movie)
-    #folder_manager.clean_project_folder(movie.project)
+    folder_manager.clean_project_folder(movie.project)
   end
   
   def update(sender, message)
