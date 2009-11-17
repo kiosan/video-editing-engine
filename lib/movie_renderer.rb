@@ -73,6 +73,7 @@ class MovieRenderer
   end
   
   def process_effects(movie)
+    visuals = movie.visual_sequence.sort
     visuals.each {|visual|
       if(visual.type == "video")
         visual.effects.each do |effect|
