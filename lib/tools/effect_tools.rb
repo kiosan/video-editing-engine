@@ -50,6 +50,8 @@ class EffectTools
 
     cmd.sub!('<formula>', formula)
 
+    p visual
+    
     cmd.sub!('<video_file>', visual.file)
 
     cmd.sub!('<target>', filename + "avi")
