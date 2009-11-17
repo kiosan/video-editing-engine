@@ -35,7 +35,7 @@ class EffectTools
 
     cmd.sub!('<scale_resolution>', scale_resolution)
 
-
+    p effect
     
     formula = @settings['formula_'+effect.properties["direction"]].dup
 
