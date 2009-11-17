@@ -30,6 +30,9 @@ class MovieRenderer
     process_effects(movie)
     update_all("MovieRenderer", "...effects finished!")
 
+    update_all("MovieRenderer", "Combining videos...")
+    @video_tool.combine_video(movie)
+    update_all("MovieRenderer", "Combining videos finished...")
 
     update_all("MovieRenderer", "Multiplexing audio and video...")
     @video_tool.multiplex(movie, video_file, audio_file)
@@ -69,7 +72,6 @@ class MovieRenderer
     sequence = VisualSequence.new
     sequence.visuals = visuals
     movie.visual_sequence = sequence
-    @video_tool.combine_video(movie)
   end
   
   def process_effects(movie)

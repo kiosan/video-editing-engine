@@ -42,9 +42,8 @@ class EffectTools
     2.times do
       formula.sub!('<delta>', delta.to_s)
       formula.sub!('<delta_pi>', (delta * 2 / Math::PI).ceil.to_s)
+      formula.sub!('<speed>', speed.to_s)
     end
-
-    formula.sub!('<speed>', speed.to_s)
 
     cmd.sub!('<formula>', formula)
 
