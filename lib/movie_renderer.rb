@@ -77,7 +77,7 @@ class MovieRenderer
     visuals.each {|visual|
       if(visual.type == "video")
         visual.effects.each do |effect|
-          @effect_tool.send(effect.name, movie, visual, effect)
+          @effect_tool.send(effect.name.to_sym, movie, visual, effect)
         end
       end
     }
