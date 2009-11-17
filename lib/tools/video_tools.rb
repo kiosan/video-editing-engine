@@ -97,6 +97,7 @@ class VideoTools
     visual.file = filename
     visual.type = "video"
     visual.mute = true
+    filename
   end
   
   #Combine clips in a movie

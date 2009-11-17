@@ -61,8 +61,8 @@ class BasicBuilder
   #and creates a Effect - object from that data.
   def read_effect(effect)
     name = effect.attribute("name")
-    effect_start_point = effect.attribute("startPoint").to_s
-    effect_end_point = effect.attribute("endPoint").to_s
+    effect_start_point = effect.attribute("start_point").to_s
+    effect_end_point = effect.attribute("end_point").to_s
     parameters = {}
     effect.each_element_with_text(){|param|
       param_name = param.attribute("name").to_s
