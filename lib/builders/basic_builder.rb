@@ -60,7 +60,7 @@ class BasicBuilder
   #Reads the data from <effect></effect> - node
   #and creates a Effect - object from that data.
   def read_effect(effect)
-    name = effect.attribute("name")
+    name = effect.attribute("name").to_s
     effect_start_point = effect.attribute("start_point").to_s
     effect_end_point = effect.attribute("end_point").to_s
     parameters = {}
