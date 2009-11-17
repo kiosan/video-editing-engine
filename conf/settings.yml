@@ -25,15 +25,15 @@ video_effects: ffmpeg  -i <source>  -y <target> 1>/dev/null 2>&1
 
 video_combine: mencoder -forceidx -oac copy -ovc copy -noskip -o <target> <source> 1>/dev/null 2>&1
 
-final_mux: ffmpeg -i <source_video> -i <source_audio> <audio_options> <video_options> <target> 
+final_mux: ffmpeg -i <source_video> -i <source_audio> <audio_options> <video_options> <target> 1>/dev/null 2>&1
 
 # 1>/dev/null 2>&1
 
-thumbnail: ffmpeg  -itsoffset -4  -i <source_video> -vcodec mjpeg -vframes 1 -an -f rawvideo -s 96x72 <thumbnail>
+thumbnail: ffmpeg  -itsoffset -4  -i <source_video> -vcodec mjpeg -vframes 1 -an -f rawvideo -s 96x72 <thumbnail> 1>/dev/null 2>&1
 
 # effects
 
-softmove: ffmpeg -i <background_video> -vfilters "[in]setpts=PTS-STARTPTS,[T1]overlay=<formula>[out];movie=0:avi:<video_file>,scale=<scale_resolution>,setpts=PTS-STARTPTS[T1]" -vcodec mjpeg -b 200k -r 25 -y <target>
+softmove: ffmpeg -i <background_video> -vfilters "[in]setpts=PTS-STARTPTS,[T1]overlay=<formula>[out];movie=0:avi:<video_file>,scale=<scale_resolution>,setpts=PTS-STARTPTS[T1]" -vcodec mjpeg -b 200k -r 25 -qscale .1 -y <target> 1>/dev/null 2>&1
 
 formula_1: -<delta>+<delta_pi>*atan(N/<speed>):<delta>-<delta_pi>*atan(N/<speed>)
 formula_2: <delta>-<delta_pi>*atan(N/<speed>):<delta>-<delta_pi>*atan(N/<speed>)
