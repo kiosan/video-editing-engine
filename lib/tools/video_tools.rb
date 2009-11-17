@@ -99,6 +99,21 @@ class VideoTools
     visual.mute = true
     filename
   end
+
+  #Creates a black screen for that is as long as the given visual
+  def generate_black_video(movie, visual)
+    #Render an image and create a video file from it
+    @generated_videos += 1
+    filename = movie.project.trimmed + "/generated-#{@generated_videos}.avi"
+    cmd = @settings['still_video'].dup
+    length = visual.end_point - visual.start_point
+    cmd.sub!('<frames>', length.to_frames(25).to_s)
+    cmd.sub!('<source>', VREConfig.instance.vre_root + "resources/black_box.png")
+    cmd.sub!('<resolution>', movie.resolution)
+    cmd.sub!('<target>', filename)
+    system(cmd)
+    filename
+  end
   
   #Combine clips in a movie
   def combine_video(movie)

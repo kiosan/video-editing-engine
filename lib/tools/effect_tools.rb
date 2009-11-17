@@ -22,7 +22,7 @@ class EffectTools
   def softmove(movie, visual, effect)
     
     # create blank video for background
-    bg_video = @video_tools.create_black_video(movie, visual)
+    bg_video = @video_tools.generate_black_video(movie, visual)
 
     # apply avfilter
     filename = movie.project.trimmed + "/" + (File.basename(visual.file)).split(".")[0] + "_filtered."
