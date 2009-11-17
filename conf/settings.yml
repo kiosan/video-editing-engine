@@ -33,7 +33,7 @@ thumbnail: ffmpeg  -itsoffset -4  -i <source_video> -vcodec mjpeg -vframes 1 -an
 
 # effects
 
-softmove: ffmpeg -i <background_video> -vfilters "[in]setpts=PTS-STARTPTS,[T1]overlay=<formula>[out];movie=0:avi:<video_file>,scale=<scale_resolution>,setpts=PTS-STARTPTS[T1]" -vcodec mjpeg -b 200k -qscale 1 -an -r 25 -y <target>
+softmove: ffmpeg -i <background_video> -vfilters "[in]setpts=PTS-STARTPTS,[T1]overlay=<formula>[out];movie=0:avi:<video_file>,scale=<scale_resolution>,setpts=PTS-STARTPTS[T1]" -vcodec mjpeg -b 200k -r 25 -y <target>
 
 formula_1: -<delta>+<delta_pi>*atan(N/<speed>):<delta>-<delta_pi>*atan(N/<speed>)
 formula_2: <delta>-<delta_pi>*atan(N/<speed>):<delta>-<delta_pi>*atan(N/<speed>)
