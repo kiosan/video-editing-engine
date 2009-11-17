@@ -23,7 +23,7 @@ class MovieRenderer
     update_all("MovieRenderer", "...audioprocessing finished!")
     
     update_all("MovieRenderer", "Processing visuals...")
-    video_file = process_visuals(movie)
+    process_visuals(movie)
     update_all("MovieRenderer", "...videoprocessing finished!")
 
     update_all("MovieRenderer", "Processing effects...")
@@ -31,7 +31,7 @@ class MovieRenderer
     update_all("MovieRenderer", "...effects finished!")
 
     update_all("MovieRenderer", "Combining videos...")
-    @video_tool.combine_video(movie)
+    video_file = @video_tool.combine_video(movie)
     update_all("MovieRenderer", "Combining videos finished...")
 
     update_all("MovieRenderer", "Multiplexing audio and video...")

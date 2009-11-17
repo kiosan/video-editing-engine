@@ -31,7 +31,7 @@ class EffectTools
 
     cmd.sub!('<background_video>', bg_video)
     
-    scale_resolution = movie.resolution.split(":").collect { |el| (el.to_f * 1.04).ceil }.join(":")
+    scale_resolution = movie.resolution.split("х").collect { |el| (el.to_f * 1.04).ceil }.join(":")
 
     cmd.sub!('<scale_resolution>', scale_resolution)
 
@@ -47,8 +47,6 @@ class EffectTools
 
     cmd.sub!('<formula>', formula)
 
-    p visual
-    
     cmd.sub!('<video_file>', visual.file)
 
     cmd.sub!('<target>', filename + "avi")
