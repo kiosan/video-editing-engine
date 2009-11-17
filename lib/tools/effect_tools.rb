@@ -41,9 +41,9 @@ class EffectTools
 
     delta = 40
     speed = 50
-    formula.sub!('<delta>', delta)
-    formula.sub!('<delta_pi>', delta * 2 / Math::PI)
-    formula.sub!('<speed>', speed)
+    formula.sub!('<delta>', delta.to_s)
+    formula.sub!('<delta_pi>', (delta * 2 / Math::PI).ceil.to_s)
+    formula.sub!('<speed>', speed.to_s)
 
     cmd.sub!('<formula>', formula)
 
