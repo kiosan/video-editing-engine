@@ -20,7 +20,7 @@ class Mp4Multiplexer
     final_file = movie.project.final + "/#{movie.project.name}.flv"
     
     #cmd.sub!('<video_options>', '-vcodec flv -b 200 -maxrate 200 -minrate 200 -bufsize 512')
-    cmd.sub!('<video_options>', '-vcodec flv -b 200k -s 640x480  -qscale .05')
+    cmd.sub!('<video_options>', '-vcodec flv -b 200k -s 640x480  -qscale 1')
 
     cmd.sub!('<target>', final_file)
     #cmd.sub!('<audio_options>', '-map 0:0 -map 1:0 -acodec amr_nb -b 200 -ab 64 -ar 8000 -ac 1') if has_audio
