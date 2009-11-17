@@ -37,8 +37,8 @@ class EffectTools
 
     formula = @settings['formula_'+effect.properties["direction"]].dup
 
-    delta = 40
-    speed = 50
+    delta = 80
+    speed = 30
     2.times do
       formula.sub!('<delta>', delta.to_s)
       formula.sub!('<delta_pi>', (delta * 2 / Math::PI).ceil.to_s)
