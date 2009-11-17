@@ -14,7 +14,7 @@ class MovieRenderer
   def initialize(video_tool = VideoTools.new, audio_tool = AudioTools.new)
     @video_tool = video_tool
     @audio_tool = audio_tool
-    @effect_tool = EffectTool.new(@video_tool)
+    @effect_tool = EffectTools.new(@video_tool)
   end
   
   def render(movie)
