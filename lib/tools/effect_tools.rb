@@ -31,12 +31,10 @@ class EffectTools
 
     cmd.sub!('<background_video>', bg_video)
     
-    scale_resolution = movie.resolution.split(":").collect { |el| el * 1.03 }.join(":")
+    scale_resolution = movie.resolution.split(":").collect { |el| el.to_f * 1.03 }.join(":")
 
     cmd.sub!('<scale_resolution>', scale_resolution)
 
-    p effect
-    
     formula = @settings['formula_'+effect.properties["direction"]].dup
 
     delta = 40
