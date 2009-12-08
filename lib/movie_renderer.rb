@@ -34,9 +34,15 @@ class MovieRenderer
     video_file = @video_tool.combine_video(movie)
     update_all("MovieRenderer", "Combining videos finished...")
 
+    update_all("MovieRenderer", "Adding subtitles...")
+    video_file = @video_tool.add_subtitles(movie)
+    update_all("MovieRenderer", "...adding subtitles finished")
+
     update_all("MovieRenderer", "Multiplexing audio and video...")
     @video_tool.multiplex(movie, video_file, audio_file)
     update_all("MovieRenderer", "...multiplexing finished")
+
+    
 
     update_all("MovieRenderer", "...generating thumbnail")
     @video_tool.generate_thumbnail(movie)

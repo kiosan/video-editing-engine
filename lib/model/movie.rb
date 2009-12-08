@@ -8,12 +8,13 @@ require 'model/project'
 
 class Movie
   
-  attr_reader(:name, :format, :resolution, :audio_sequence, :visual_sequence, :effects, :project, :width, :height)
+  attr_reader(:name, :format, :resolution, :audio_sequence, :visual_sequence, :effects, :project, :width, :height, :subtitles, :final_file)
   
-  def initialize(name, format, resolution)
+  def initialize(name, format, resolution, subtitles)
     @name = name
     @format = format
     @resolution = resolution
+    @subtitles = subtitles
     @audio_sequence = AudioSequence.new
     @visual_sequence = VisualSequence.new
     @effects = []

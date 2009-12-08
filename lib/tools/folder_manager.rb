@@ -30,6 +30,7 @@ class FolderManager
       remove_directory(project.trimmed)
       File.delete(project.final  + "/videotrack.avi")
       File.delete(project.final  + "/audiotrack.wav")
+      File.delete(project.final  + "/video.avi")
   end
   
   def delete_project_folder(project)

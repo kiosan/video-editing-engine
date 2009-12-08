@@ -31,6 +31,11 @@ final_mux: ffmpeg -i <source_video> -i <source_audio> <audio_options> <video_opt
 
 thumbnail: ffmpeg  -itsoffset -4  -i <source_video> -vcodec mjpeg -vframes 1 -an -f rawvideo -s 96x72 <thumbnail> 1>/dev/null 2>&1
 
+
+# subtitles
+
+subtitles: mencoder -ovc lavc -sub <subtitles>  -o <target> <source>
+
 # effects
 
 softmove: ffmpeg -i <background_video> -vfilters "[in]setpts=PTS-STARTPTS,[T1]overlay=<formula>[out];movie=0:avi:<video_file>,scale=<scale_resolution>,setpts=PTS-STARTPTS[T1]" -vcodec mjpeg -b 200k -r 25 -qscale .1 -y <target> 1>/dev/null 2>&1

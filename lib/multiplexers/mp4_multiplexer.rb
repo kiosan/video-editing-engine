@@ -19,6 +19,7 @@ class Mp4Multiplexer
     has_audio = File.exist?(audio_file)
     final_file = movie.project.final + "/#{movie.project.name}.flv"
     
+
     #cmd.sub!('<video_options>', '-vcodec flv -b 200 -maxrate 200 -minrate 200 -bufsize 512')
     cmd.sub!('<video_options>', '-vcodec flv -b 200k -s 640x480  -qscale 2')
 

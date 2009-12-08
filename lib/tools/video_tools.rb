@@ -133,6 +133,20 @@ class VideoTools
     return video_file
   end
 
+  #Add subtites to movie
+  def add_subtitles(movie)
+    video_file_res = movie.project.final + "/video.avi"
+    video_file = movie.project.final + "/videotrack.avi"
+    cmd = @settings['subtitles'].dup
+    cmd.sub!('<source>', video_file)
+    cmd.sub!('<target>', video_file_res)
+    cmd.sub!('<subtitles>', movie.subtitles)
+    puts "Adding subtitles"
+    puts cmd
+    system(cmd)
+    return video_file_res
+  end
+
   def generate_thumbnail(movie)
     thumb_file = movie.project.final + "/thumbnail.jpg"
     cmd = @settings['thumbnail'].dup

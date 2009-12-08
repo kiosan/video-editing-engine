@@ -25,6 +25,7 @@ class MovieBuilder
   #ToDo: Validate xml
   def build_movie(movie_file)
     extension = File.extname(movie_file)
+    
     if(extension == ".xml")
       return build_from_xml(movie_file)
     elsif(extension == ".json")
@@ -43,15 +44,33 @@ class MovieBuilder
     
     e = XPath.first(xml, "movie")
     timeline_format = e.attribute("type").to_s #Get the attribute and convert to string
+
+
     file_version = e.attribute("version")
+
+
     
+
+
+
     #update_all("Filetype: #{fileType} Version: #{fileVersion}")
     
     name = XPath.first(xml, "//metadata/name").text
     format = XPath.first(xml, "//metadata/format").text
     resolution = XPath.first(xml, "//metadata/resolution").text
     
-    @movie = Movie.new(name, format, resolution)
+    path =  File.dirname(xml_file)
+    subtitles = nil
+    subttl = path + "/subtitles.srt"
+    if (File.exists?(subtitles))
+      subtitles = subttl
+    end
+
+    @movie = Movie.new(name, format, resolution, subtitles)
+
+    
+
+    
     
     if(timeline_format == "channeled")
       update_all("MovieBuilder", "Building an object model from channeled timeline-format...")
