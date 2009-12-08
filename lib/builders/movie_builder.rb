@@ -62,7 +62,7 @@ class MovieBuilder
     path =  File.dirname(xml_file)
     subtitles = nil
     subttl = path + "/subtitles.srt"
-    if (File.exists?(subtitles))
+    if (File.exists?(subttl))
       subtitles = subttl
     end
 
